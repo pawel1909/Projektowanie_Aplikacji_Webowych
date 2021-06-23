@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Zadanie2</title>
+</head>
+<body>
+
+    <div class="instrukcja">
+        <div>
+            Aby rozpocząć nagrywanie wciśnij 'checkboxa' i naciśnij 'Start'
+            <br />
+            Aby odsłuchać nagranie wciśnij 'Play', nie musisz wciskać checkboxa
+            <br />
+            Aby włączyć kilka nagrań na raz, zaznacz odpowiednie checkboxy i wciśnij 'play-all'
+        </div>
+    </div>
+
+    <audio src="sounds/clap-crushed.wav" data-sound="clap-crushed"></audio>
+    <audio src="sounds/kick-electro02.wav" data-sound="kick-electro02"></audio>
+    <audio src="sounds/kick-oldschool.wav" data-sound="kick-oldschool"></audio>
+    <audio src="sounds/kick-thump.wav" data-sound="kick-thump"></audio>
+    <audio src="sounds/perc-short.wav" data-sound="perc-short"></audio>
+    <audio src="sounds/snare-analog.wav" data-sound="snare-analog"></audio>
+    <audio src="sounds/snare-electro.wav" data-sound="snare-electro"></audio>
+    <audio src="sounds/snare-vinyl02.wav" data-sound="snare-vinyl02"></audio>
+
+    <div class="container">
+        <div id="gora">
+            <button id="button_xD" name="q">q</button>
+            <button id="button_xD" name="w">w</button>
+            <button id="button_xD" name="e">e</button>
+            <button id="button_xD" name="r">r</button>
+        </div>
+        
+
+        <div id="dol">
+            <button id="button_xD" name="a">a</button>
+            <button id="button_xD" name="s">s</button>
+            <button id="button_xD" name="d">d</button>
+            <button id="button_xD" name="f">f</button>
+        </div>
+    </div>
+    <div class="record-div">
+
+        <div class="record">
+            <input type="checkbox" id="check"/>
+            <button id="record_btn" onclick="">Play 1</button>
+            <button id="record-start">Start 1</button>
+        </div>
+        <br/>
+        <div class="record">
+            <input type="checkbox" id="check"/>
+            <button id="record_btn" onclick="">Play 2</button>
+            <button id="record-start">Start 2</button>
+        </div>
+        <br/>
+        <div class="record">
+            <input type="checkbox" id="check"/>
+            <button id="record_btn" onclick="">Play 3</button>
+            <button id="record-start">Start 3</button>
+        </div>
+        <br/>
+        <div class="record">
+            <input type="checkbox" id="check"/>
+            <button id="record_btn" onclick="">Play 4</button>
+            <button id="record-start">Start 4</button>
+        </div>
+        <br />
+        <button id="play-all" >Play All</button>
+    </div>
+
+
+    <button class="dodaj"  onmouseover="MessageEvent"> We mnie kliknij Plisssss</button>
+
+    
+
+    <script src="index.js"></script>
+</body>
+</html>
