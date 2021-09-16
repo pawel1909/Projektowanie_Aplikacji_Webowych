@@ -39,7 +39,7 @@ export class App {
     }
     start(){
         //elements
-        localStorage.setItem('notatki', '');
+        //localStorage.setItem('notatki', '');
         this.searchBar = document.querySelector('.searchBar');
         this.modal = document.querySelector('.modal');
         this.noteForm = document.querySelector('.note-form');
@@ -54,7 +54,6 @@ export class App {
             this.searching();
         });
 
-        //temporary
         if (localStorage.getItem('notatki')) {
             this.noteList = this.getData();
             this.ID = this.noteList[this.noteList.length - 1].uniqueID + 1;
@@ -198,8 +197,11 @@ export class App {
         div.classList = 'divNoteElement';
         div.id = "n" + element.uniqueID.toString();
         // Utworzenie "Kafelka" z Notatką
-        let inDiv: any = document.createElement('div');
-        inDiv.classList = 'inDivElement';
+        let inDiv: HTMLDivElement = <HTMLDivElement>document.createElement('div');
+        //inDiv.classList = 'inDivElement';
+        inDiv.setAttribute('class', 'inDivElement');
+        inDiv.style.width = "200px";
+        inDiv.style.height = "auto";
         inDiv.textContent = element.note;
         //utworzenie "Kafelka" z Tytułem
         let divTitle: any = document.createElement('div');
@@ -263,6 +265,7 @@ export class App {
 
         
         this.getButtons();
+        this.changeColor();
         //console.log(this.noteDeleteButtons/* [0].previousElementSibling.previousElementSibling.previousElementSibling.innerHTML.split(' ')[1] */);
         this.noteElement = document.querySelectorAll('.divNoteElement');
     }
@@ -362,7 +365,38 @@ export class App {
         return JSON.parse(localStorage.getItem('notatki'));
     }
     
-    
+    changeColor(): void {
+        let divs: NodeListOf<HTMLDivElement> = document.querySelectorAll('.divNoteElement');
+        let divContainer: HTMLDivElement = document.querySelector('.note-div');
+
+        divs.forEach(el => {
+            el.addEventListener('click', () => {
+                //el.style.background = 'red';
+                let x: HTMLDivElement = <HTMLDivElement>el.childNodes[2];
+                let val: number = Math.round((Math.random() * 4));
+                switch (val) {
+                    case 0:
+                        el.style.background = NoteColor[0];
+                        
+                        break;
+                    case 1:
+                        el.style.background = NoteColor[1];
+                        break;
+                    case 2:
+                        el.style.background = NoteColor[2];
+                        break;
+                    case 3:
+                        el.style.background = NoteColor[3];
+                        break;
+                
+                    default:
+                        break;
+                }
+                
+                
+            } );
+        });
+    }
     
 }
 export const AAA = 10;
