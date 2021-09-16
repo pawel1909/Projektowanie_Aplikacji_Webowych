@@ -1,0 +1,65 @@
+body {
+  background: #051622;
+}
+
+.lewe {
+  float: left;
+  width: 79%;
+  height: 900px;
+  border-radius: 20px;
+  background: url("https://cdn.staticcrate.com/stock-hd/effects/footagecrate-4k-stormcloud4-prev-full.png") no-repeat fixed center;
+  background-size: cover;
+  margin-top: 60px;
+}
+
+.prawe{
+  float: right;
+  width: 20%;
+  height: 900px;
+  border-radius: 20px;
+  background: #2F3044;
+}
+
+.sendBtn {
+  float: right;
+}
+
+.weatherPlace{
+  margin: 10%;
+  background: #12151F;
+  border-radius: 10px;
+  max-width: 300rem;
+  text-align: center;
+  color: #05F4B7;
+}
+
+.stopka{
+  position: absolute;
+  bottom: 0;
+  width: 99%;
+  height: 20px;
+  background: #646C79;
+  border-radius: 4px;
+  text-indent: 20px;
+}
+
+.cityList_obj{
+  background: #28559A;
+  margin: 1%;
+  text-align: center;
+}
+
+.kafelek {
+  margin: 10px;
+  width: 240px;
+  height: 250px;
+  border-radius: 20px;
+  border: black 1px solid;
+  color: red;
+  text-align: center;
+  float: left;
+  background-size: auto;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
